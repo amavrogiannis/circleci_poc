@@ -1,10 +1,14 @@
 version: 2.1
 
+orbs:
+  buildevents: honeycombio/buildevents@0.9.0
+
 jobs: 
   build:
     docker: 
     - image: cimg/base:2023.06
     steps:
+    - buildevents/start_trace
     - checkout
     - setup_remote_docker:
         version: 20.10.14
@@ -14,4 +18,17 @@ jobs:
         command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
+    
+    watch:
+      docker: 
+      - image: cimg/base:2023.06
+      steps:
+      - buildevents/watch_build_and_finish
 
+workflows:
+  build_image:
+    jobs:
+    - build
+    - watch:
+        requires:
+        - build
