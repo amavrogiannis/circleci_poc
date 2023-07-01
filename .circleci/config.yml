@@ -19,7 +19,7 @@ jobs:
         environment:
           CONTAINER_NAME: sample-app 
     - buildevents/create_marker:
-        dataset: demo-poc
+        message: $CONTAINER_NAME
 
   watch:
     docker: 
