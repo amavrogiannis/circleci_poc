@@ -18,6 +18,7 @@ jobs:
         command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
+          BUILDEVENT_DATASET: alex-demo
     # - buildevents/add_context:
     #     field_name: circleci_image
     #     field_value: $CONTAINER_NAME:CIRCLE_TAG
