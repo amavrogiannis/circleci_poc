@@ -15,12 +15,15 @@ jobs:
         docker_layer_caching: true
     - run: 
         name: Building Image
-        command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
+        command: docker build . -t $CONTAINER_NAME:$CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
-    # - buildevents/create_marker:
-    #     message: $CONTAINER_NAME
-    - buildevents/watch_build_and_finish
+    - buildevents/add_context:
+        field_name: circleci_image
+        field_value: $CONTAINER_NAME:$CIRCLE_TAG
+    - buildevents/create_marker:
+        dataset: alex-demo
+        message: this is a demo $CIRCLE_BUILD_NUM
 
   watch:
     docker: 
