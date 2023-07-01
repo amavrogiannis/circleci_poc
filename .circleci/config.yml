@@ -18,7 +18,7 @@ jobs:
         command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
-    - buildevents:
+    - buildevents/cmd:
         dataset: demo-poc
     
   watch:
