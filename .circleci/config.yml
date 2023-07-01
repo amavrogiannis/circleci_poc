@@ -25,7 +25,8 @@ jobs:
     docker: 
     - image: cimg/base:2023.06
     steps:
-    - buildevents/watch_build_and_finish
+    - buildevents/watch_build_and_finish:
+        api_key: $BUILDEVENT_APIKEY
 
 workflows:
   img_docker:
