@@ -18,9 +18,9 @@ jobs:
         command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
-    - buildevents/cmd:
+    - buildevents/create_marker:
         dataset: demo-poc
-    
+
   watch:
     docker: 
     - image: cimg/base:2023.06
@@ -28,9 +28,9 @@ jobs:
     - buildevents/watch_build_and_finish
 
 workflows:
-  build_image:
+  img_docker:
     jobs:
-    - build
-    - watch:
-        requires:
-        - build
+      - build
+      - watch:
+          requires:
+            - build
