@@ -8,7 +8,6 @@ jobs:
     docker: 
     - image: cimg/base:2023.06
     steps:
-    - name: Set dataset name
     - run: |
         export BUILDEVENT_DATASET=alex-demo
     - buildevents/start_trace
@@ -21,7 +20,6 @@ jobs:
         command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
         environment:
           CONTAINER_NAME: sample-app 
-          BUILDEVENT_DATASET: alex-demo
     - buildevents/create_marker:
         dataset: alex-demo
         message: this is a demo $CIRCLE_BUILD_NUM
