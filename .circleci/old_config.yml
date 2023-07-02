@@ -1,0 +1,54 @@
+version: 2.1
+
+orbs:
+  buildevents: honeycombio/buildevents@0.9.0
+
+jobs: 
+  build:
+    docker: 
+    - image: cimg/base:2023.06
+    environment:
+      CONTAINER_NAME: sample-app
+      BUILDEVENT_DATASET: alex-demo
+    steps:
+    - buildevents/start_trace
+    # - buildevents/with_job_span:
+    #     steps:
+    #       - run:
+    #           name: set BUILD_ID
+    #           command: |
+    #             chmod +x scripts/hc_job_span.sh
+    #             ./scripts/hc_job_span.sh
+    - checkout
+    - setup_remote_docker:
+        version: 20.10.14
+        docker_layer_caching: true
+    - buildevents/with_job_span:
+      - steps:
+        - run: 
+            name: build_img
+            command: |
+              docker build . -t $CONTAINER_NAME:CIRCLE_TAG
+    # - run: 
+    #     name: HC Trace Error
+    #     command: |
+    #       chmod +x scripts/hc.sh
+    #       ./scripts/hc.sh
+    - buildevents/create_marker:
+        dataset: $BUILDEVENT_DATASET
+        message: this is a demo $CIRCLE_BUILD_NUM
+    
+
+  watch:
+    docker: 
+    - image: cimg/base:2023.06
+    steps:
+    - buildevents/watch_build_and_finish
+
+workflows:
+  img_docker:
+    jobs:
+      - build
+      - watch:
+          requires:
+            - build
