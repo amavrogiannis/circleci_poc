@@ -32,8 +32,6 @@ jobs:
         dataset: $BUILDEVENT_DATASET
         message: this is a demo $CIRCLE_BUILD_NUM
     
-    deploy_img:
-      docker
 
   watch:
     docker: 
