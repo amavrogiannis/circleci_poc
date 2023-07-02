@@ -37,8 +37,7 @@ jobs:
                   CONTAINER_NAME: sample-app
       - buildevents/add_context:
           field_name: demo_data
-          field_value: |
-            echo "Works!"
+          field_value: $CONTAINER_NAME:$CIRCLE_SHA1
           verbose: true
 
 
