@@ -13,11 +13,11 @@ jobs:
     environment:
       BUILDEVENT_DATASET: alex-demo
 
-  watch:
-    docker: 
-    - image: cimg/base:2023.06
-    steps:
-    - buildevents/watch_build_and_finish
+  # watch:
+  #   docker: 
+  #   - image: cimg/base:2023.06
+  #   steps:
+  #   - buildevents/watch_build_and_finish
 
   build: 
     docker:
@@ -35,15 +35,16 @@ jobs:
                   docker build . -t $CONTAINER_NAME:$CIRCLE_SHA1
                 environment:
                   CONTAINER_NAME: sample-app
+      - buildevents/finish
 
 
 workflows:
   img_docker:
     jobs:
       - setup
-      - watch:
-          requires:
-            - setup
+      # - watch:
+      #     requires:
+      #       - setup
       - build:
           requires:
             - setup
