@@ -4,7 +4,7 @@ orbs:
   buildevents: honeycombio/buildevents@0.9.0
 
 jobs: 
-  build_img:
+  build:
     docker: 
     - image: cimg/base:2023.06
     environment:
@@ -44,7 +44,7 @@ jobs:
 workflows:
   img_docker:
     jobs:
-      - build_img
+      - build
       - watch:
           requires:
             - build
