@@ -13,11 +13,11 @@ jobs:
     environment:
       BUILDEVENT_DATASET: alex-demo
 
-  watch:
-    docker: 
-    - image: cimg/base:2023.06
-    steps:
-    - buildevents/finish
+  # watch:
+  #   docker: 
+  #   - image: cimg/base:2023.06
+  #   steps:
+  #   - buildevents/finish
 
   build: 
     docker:
@@ -35,6 +35,11 @@ jobs:
                   docker build . -t $CONTAINER_NAME:$CIRCLE_SHA1
                 environment:
                   CONTAINER_NAME: sample-app
+      - buildevents/add_context:
+          field_name: demo_data
+          field_value: |
+            echo "Works!"
+          verbose: true
 
 
 workflows:
@@ -44,6 +49,6 @@ workflows:
       - build:
           requires:
             - setup
-      - watch:
-          requires:
-            - setup
+      # - watch:
+      #     requires:
+      #       - setup
