@@ -18,10 +18,10 @@ jobs:
         docker_layer_caching: true
     - run: 
         name: Building Image
-        command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
+        command: docker build . -t $env.CONTAINER_NAME:CIRCLE_TAG
     - buildevents/stop_trace
     - buildevents/create_marker:
-        dataset: alex-demo
+        dataset: $env.BUILDEVENT_DATASET
         message: this is a demo $CIRCLE_BUILD_NUM
 
   watch:
