@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: login to docker
     - command: |
-        docker login --username $USER --password $REG_TOKEN registry.gitlab.com
+        docker login --username $GL_USER --password $REG_TOKEN registry.gitlab.com
 
   setup: 
     docker: 
