@@ -28,7 +28,7 @@ jobs:
         - run: 
             name: build_img
             command: |
-              docker build . -t $CONTAINER_NAME:CIRCLE_TAG
+              docker build . -t $CONTAINER_NAME:CIRCLE_SHA1
     # - run: 
     #     name: HC Trace Error
     #     command: |
