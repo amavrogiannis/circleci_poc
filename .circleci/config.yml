@@ -67,7 +67,9 @@ workflows:
       - build:
           requires:
             - setup
-      - login
+      - login:
+          requires:
+            - setup
       - deploy:
           requires:
             - login
