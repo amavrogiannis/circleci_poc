@@ -7,10 +7,10 @@ jobs:
   build:
     docker: 
     - image: cimg/base:2023.06
+    environment:
+      CONTAINER_NAME: sample-app
+      BUILDEVENT_DATASET: alex-demo
     steps:
-    - environment:
-        CONTAINER_NAME: sample-app
-        BUILDEVENT_DATASET: alex-demo
     - buildevents/start_trace
     - checkout
     - setup_remote_docker:
@@ -18,10 +18,9 @@ jobs:
         docker_layer_caching: true
     - run: 
         name: Building Image
-        command: docker build . -t $env.CONTAINER_NAME:CIRCLE_TAG
-    - buildevents/stop_trace
+        command: docker build . -t $CONTAINER_NAME:CIRCLE_TAG
     - buildevents/create_marker:
-        dataset: $env.BUILDEVENT_DATASET
+        dataset: $BUILDEVENT_DATASET
         message: this is a demo $CIRCLE_BUILD_NUM
 
   watch:
