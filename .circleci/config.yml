@@ -1,22 +1,27 @@
 version: 2.1
 
+executors:
+  docker:
+    docker:
+      - image: cimg/base:2023.06
+    resource_class: medium
+    environment:
+          IMAGE_NAME: registry.gitlab.com/and-amavrogiannis/lab-project/sample-app
+
 jobs:
 
   setup: 
-    docker: 
-      - image: cimg/base:2023.06
-    resource_class: medium
+    executor: 
+      name: docker
     steps:
       - setup_remote_docker:
           docker_layer_caching: true
           version: 20.10.14
-    environment:
-      IMAGE_NAME: registry.gitlab.com/and-amavrogiannis/lab-project/sample-app
+    
 
   build:
-    docker: 
-      - image: cimg/base:2023.06
-    resource_class: medium
+    executor: 
+      name: docker
     steps:
       - checkout
       - run:
@@ -24,9 +29,8 @@ jobs:
           command: docker build -t "${IMAGE_NAME}:${CIRCLE_SHA1}" .
   
   deploy:
-    docker: 
-      - image: cimg/base:2023.06
-    resource_class: medium
+    executor: 
+      name: docker
     steps:
       - run: 
           name: Docker push
