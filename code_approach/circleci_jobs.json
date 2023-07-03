@@ -1,6 +1,568 @@
 {
-  "next_page_token": "AO9ui98K2mY3kGgQ-ZQeKd5e7-XoCJxCPa3pUrbEl13IGRUiMjwyq8C-KbCJNajwjd9sDvBARwl9eA3p2GZHYvjvaM7Mb23w-st8dP2koNAaVsv5kWF1i5IHAIeuTzAid1uDe8tUoVnx",
+  "next_page_token": "AO9ui9-8DoKeSj--miDtUhLZHXctlMIElrHRsj_dcFmP5oB5tsju8ZYL93HrkY_FlZ0roZG_ZlgQquigV331XJFqGt8aRHC0m-53twBe0TlXR42nfNih4R5p8BZXGoyjDmZdPdPMxIbU",
   "items": [
+    {
+      "id": "4e604621-42e6-472f-a3a4-b6e0f33f0ff8",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T14:04:42.156Z",
+      "number": 55,
+      "state": "created",
+      "created_at": "2023-07-03T14:04:42.156Z",
+      "trigger": {
+        "received_at": "2023-07-03T14:04:41.823Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "4adc08952e88fdf106a42887a88025f20c6e28b5",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "remote docker"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "0dbd1133-e83b-4f79-8a81-fb6a3744fab9",
+      "errors": [
+        {
+          "type": "config",
+          "message": "|     - resource_class"
+        },
+        {
+          "type": "config",
+          "message": "ERROR IN CONFIG FILE:"
+        },
+        {
+          "type": "config",
+          "message": "[#/executors/docker] 0 subschemas matched instead of one"
+        },
+        {
+          "type": "config",
+          "message": "1. [#/executors/docker] expected type: String, found: Mapping"
+        },
+        {
+          "type": "config",
+          "message": "|   Executor may be a string reference to another executor"
+        },
+        {
+          "type": "config",
+          "message": "2. [#/executors/docker] extraneous key [steps] is not permitted"
+        },
+        {
+          "type": "config",
+          "message": "|   Permitted keys:"
+        },
+        {
+          "type": "config",
+          "message": "|     - description"
+        },
+        {
+          "type": "config",
+          "message": "|     - macos"
+        },
+        {
+          "type": "config",
+          "message": "|     - resource_class"
+        },
+        {
+          "type": "config",
+          "message": "|     - docker"
+        },
+        {
+          "type": "config",
+          "message": "|     - working_directory"
+        },
+        {
+          "type": "config",
+          "message": "|     - machine"
+        },
+        {
+          "type": "config",
+          "message": "|     - environment"
+        },
+        {
+          "type": "config",
+          "message": "|     - shell"
+        },
+        {
+          "type": "config",
+          "message": "|     - parameters"
+        },
+        {
+          "type": "config",
+          "message": "|   Passed keys:"
+        },
+        {
+          "type": "config",
+          "message": "|     - docker"
+        },
+        {
+          "type": "config",
+          "message": "|     - steps"
+        },
+        {
+          "type": "config",
+          "message": "|     - environment"
+        }
+      ],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T14:03:41.934Z",
+      "number": 54,
+      "state": "errored",
+      "created_at": "2023-07-03T14:03:41.934Z",
+      "trigger": {
+        "received_at": "2023-07-03T14:03:41.626Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "3f54d1ee2f27a0f47f7a5a6329946db4cf7d3215",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "remove setup"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "d10bfabe-c7bf-4813-83a7-dd80f9b2ebab",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T14:02:22.686Z",
+      "number": 53,
+      "state": "created",
+      "created_at": "2023-07-03T14:02:22.686Z",
+      "trigger": {
+        "received_at": "2023-07-03T14:02:22.369Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "f2d6dfceca66267d48820270f581a9ee80949e67",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "executor global"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "0bb95b21-d391-47c9-bdb2-8c59cc02acd9",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T13:58:01.408Z",
+      "number": 52,
+      "state": "created",
+      "created_at": "2023-07-03T13:58:01.408Z",
+      "trigger": {
+        "received_at": "2023-07-03T13:58:00.878Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "f6c5a775d98bb39be8b91b61ae29ce6b2689480d",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "fixing tag and image var"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "08f7660e-9a94-479c-a1fd-b84dafcda493",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:57:57.895Z",
+      "number": 51,
+      "state": "created",
+      "created_at": "2023-07-03T12:57:57.895Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:57:57.570Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "658ff754bf55717c8403390eff4c29f3878255ef",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "fixing tag"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "70d55d81-8390-429e-bfad-134c3afb2707",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:48:57.939Z",
+      "number": 50,
+      "state": "created",
+      "created_at": "2023-07-03T12:48:57.939Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:48:57.661Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "176a78ede526c41fe39a5df730aff49b0da37111",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "quick test"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "4cce28aa-af64-417a-b4f0-15209843dc5c",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:46:17.313Z",
+      "number": 49,
+      "state": "created",
+      "created_at": "2023-07-03T12:46:17.313Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:46:16.986Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "6fbb5bb1f444bde4255bf1f7c4f37bcaab0db8aa",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "dockerfile find"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "314390aa-4d9a-4cea-9a79-35d98e9dd643",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:44:53.448Z",
+      "number": 48,
+      "state": "created",
+      "created_at": "2023-07-03T12:44:53.448Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:44:53.055Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "463361e1db02188dd570ed6f41d39a2821ed2fb5",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "+ checkout command"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "1891ec24-4c75-4d1e-b93b-d6477d4c8956",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:42:40.435Z",
+      "number": 47,
+      "state": "created",
+      "created_at": "2023-07-03T12:42:40.435Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:42:40.152Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "bfa4403dc4cb5bb90efd3a64109950106da96b68",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "removing \":\""
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "51d1d9ef-0b02-4ce2-8879-65e123ddf2b6",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T12:39:39.075Z",
+      "number": 46,
+      "state": "created",
+      "created_at": "2023-07-03T12:39:39.075Z",
+      "trigger": {
+        "received_at": "2023-07-03T12:39:38.707Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "b72347d0264a46c4d397913ea2cbd7006d0c5208",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "fix the naming - container"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "71f70275-7e33-46b6-b07b-073d77e87f39",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T11:29:17.157Z",
+      "number": 45,
+      "state": "created",
+      "created_at": "2023-07-03T11:29:17.157Z",
+      "trigger": {
+        "received_at": "2023-07-03T11:29:16.827Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "e824b064935dfd37966d8586f1301401ce84c0af",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "adding quotes"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "e3ab6345-1961-4e93-ad59-69d3c49ba93c",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T11:26:21.457Z",
+      "number": 44,
+      "state": "created",
+      "created_at": "2023-07-03T11:26:21.457Z",
+      "trigger": {
+        "received_at": "2023-07-03T11:26:21.240Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "63b5cb4e5a697dc1d8da66e6d7d823521d94f53e",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "fix_meh"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "144ab63a-ff96-492a-9fb8-13512e98b584",
+      "errors": [
+        {
+          "type": "config",
+          "message": "Job 'deploy' requires 'deploy', which is the name of 0 other jobs in workflow 'docker_image'"
+        }
+      ],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T11:25:37.658Z",
+      "number": 43,
+      "state": "errored",
+      "created_at": "2023-07-03T11:25:37.658Z",
+      "trigger": {
+        "received_at": "2023-07-03T11:25:37.075Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "1128aefae3639929e7ad13a1bc4543a9d84274e9",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "changing config file"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "dca83171-d4f5-4bd5-be75-0c4660a3b5c6",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T10:34:13.758Z",
+      "number": 42,
+      "state": "created",
+      "created_at": "2023-07-03T10:34:13.758Z",
+      "trigger": {
+        "received_at": "2023-07-03T10:34:13.523Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "c7729293fe25d35f2b211f4500823b6d5bc11b7a",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "rm secrets"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "7a7511f9-c7c7-454e-bdf3-aa7329ca6222",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T10:33:14.091Z",
+      "number": 41,
+      "state": "created",
+      "created_at": "2023-07-03T10:33:14.091Z",
+      "trigger": {
+        "received_at": "2023-07-03T10:33:13.765Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "4cfd7cc2a8297492e7fb1d97f2117475b0cd35e9",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "rm secrets"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "ac22af21-0d3c-4690-ae82-ceadb1598be6",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T10:31:39.307Z",
+      "number": 40,
+      "state": "created",
+      "created_at": "2023-07-03T10:31:39.307Z",
+      "trigger": {
+        "received_at": "2023-07-03T10:31:38.958Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "ba55e74bcb41cdd2d1f3fd510b7ad287c24fe3e9",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "123"
+        },
+        "branch": "master"
+      }
+    },
+    {
+      "id": "a42530bc-8cc2-4dcb-8e57-a09ee9fe0fac",
+      "errors": [],
+      "project_slug": "gh/amavrogiannis/circleci_poc",
+      "updated_at": "2023-07-03T10:29:23.866Z",
+      "number": 39,
+      "state": "created",
+      "created_at": "2023-07-03T10:29:23.866Z",
+      "trigger": {
+        "received_at": "2023-07-03T10:29:23.563Z",
+        "type": "webhook",
+        "actor": {
+          "login": "amavrogiannis",
+          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
+        }
+      },
+      "vcs": {
+        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
+        "revision": "e3dc12d3a8682a8abfe485df94191298bf4b6777",
+        "provider_name": "GitHub",
+        "commit": {
+          "body": "",
+          "subject": "check"
+        },
+        "branch": "master"
+      }
+    },
     {
       "id": "0b6f6c9c-3943-49d5-af94-fd04daab2522",
       "errors": [],
@@ -107,757 +669,6 @@
         "commit": {
           "body": "",
           "subject": "login"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "01dad464-d0e8-4f17-88ba-31eaeb29e0ac",
-      "errors": [
-        {
-          "type": "config",
-          "message": "Error calling workflow: 'img_docker'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling job: 'login'"
-        },
-        {
-          "type": "config",
-          "message": "Cannot find a definition for command named name"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T16:05:57.429Z",
-      "number": 35,
-      "state": "errored",
-      "created_at": "2023-07-02T16:05:57.429Z",
-      "trigger": {
-        "received_at": "2023-07-02T16:05:57.157Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "2710a9eba83ee9ed10aea7926a3153462593e31b",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "+ deploy"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "4187dbbc-b31b-4479-bcc2-2bb31196fec4",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T14:01:24.164Z",
-      "number": 34,
-      "state": "created",
-      "created_at": "2023-07-02T14:01:24.164Z",
-      "trigger": {
-        "received_at": "2023-07-02T14:01:23.875Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "be76b8da56f2c405af69c4a91de780dbbfd93077",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "fix"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "152c44c3-848a-4c72-be3b-f6c2be5bc1b7",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:58:36.314Z",
-      "number": 33,
-      "state": "created",
-      "created_at": "2023-07-02T13:58:36.314Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:58:35.991Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "10cde633ba1c3faaf164f07421cc44f842894c61",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "break and test"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "89bb14b7-415b-4322-809b-ce7160c089de",
-      "errors": [
-        {
-          "type": "config",
-          "message": "Error calling workflow: 'img_docker'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling job: 'watch'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling command: 'buildevents/finish'"
-        },
-        {
-          "type": "config",
-          "message": "Missing required argument(s): result"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:47:25.094Z",
-      "number": 32,
-      "state": "errored",
-      "created_at": "2023-07-02T13:47:25.094Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:47:24.802Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "6d07319a30dbd86586a4a0c93712febcc5d56a8b",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "finish command"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "467740eb-f8ff-46c8-b615-52229b644828",
-      "errors": [
-        {
-          "type": "config",
-          "message": "Error calling workflow: 'img_docker'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling job: 'build'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling command: 'buildevents/finish'"
-        },
-        {
-          "type": "config",
-          "message": "Missing required argument(s): result"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:44:17.364Z",
-      "number": 31,
-      "state": "errored",
-      "created_at": "2023-07-02T13:44:17.364Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:44:17.074Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "a9caf57e43e70f1693b51c9355236efbd4a08b89",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "+ finish command"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "1b5d0d35-bd54-430a-9d3f-6c81e49a5c9c",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:33:06.387Z",
-      "number": 30,
-      "state": "created",
-      "created_at": "2023-07-02T13:33:06.387Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:33:06.104Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "2818a0d9269ef3753484b06fcec19cc285500153",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "change env var"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "394d99df-5308-4bbe-a24b-d698dbf41d1e",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:27:54.158Z",
-      "number": 29,
-      "state": "created",
-      "created_at": "2023-07-02T13:27:54.158Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:27:53.846Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "09c2d4383707ef1290627fe79d64d30156b43fe7",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "+ docker"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "3ab2bd5f-9040-4bf6-bdbf-e31598fdec7a",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:26:53.991Z",
-      "number": 28,
-      "state": "created",
-      "created_at": "2023-07-02T13:26:53.991Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:26:53.711Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "643aebfc9204650c2ea9c44f872df18ddc2240d9",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "checkout step"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "fb4acf1b-e870-4ac3-8584-192b0c2dd73d",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T13:25:42.213Z",
-      "number": 27,
-      "state": "created",
-      "created_at": "2023-07-02T13:25:42.213Z",
-      "trigger": {
-        "received_at": "2023-07-02T13:25:41.921Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "a87c9110fd8c256ef8b12ca2e84bd1ea4defc06a",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "new config"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "911a0f65-004d-4285-8b43-c03aaa8b74c4",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T11:46:50.859Z",
-      "number": 26,
-      "state": "created",
-      "created_at": "2023-07-02T11:46:50.859Z",
-      "trigger": {
-        "received_at": "2023-07-02T11:46:50.563Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "b7aabef9799d8badbe6744971d770f36ace0d309",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "fix"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "dc83d492-6c1e-4235-bdb6-4c4b04db581e",
-      "errors": [
-        {
-          "type": "config",
-          "message": "ERROR IN CONFIG FILE:"
-        },
-        {
-          "type": "config",
-          "message": "[#/jobs/build] 0 subschemas matched instead of one"
-        },
-        {
-          "type": "config",
-          "message": "1. [#/jobs/build] only 1 subschema matches out of 2"
-        },
-        {
-          "type": "config",
-          "message": "|   1. [#/jobs/build] extraneous key [deploy_img] is not permitted"
-        },
-        {
-          "type": "config",
-          "message": "|   |   Permitted keys:"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - description"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - parallelism"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - macos"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - resource_class"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - docker"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - steps"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - working_directory"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - circleci_ip_ranges"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - machine"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - environment"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - executor"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - shell"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - parameters"
-        },
-        {
-          "type": "config",
-          "message": "|   |   Passed keys:"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - docker"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - environment"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - steps"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - deploy_img"
-        },
-        {
-          "type": "config",
-          "message": "2. [#/jobs/build] expected type: String, found: Mapping"
-        },
-        {
-          "type": "config",
-          "message": "|   Job may be a string reference to another job"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T11:44:58.068Z",
-      "number": 25,
-      "state": "errored",
-      "created_at": "2023-07-02T11:44:58.068Z",
-      "trigger": {
-        "received_at": "2023-07-02T11:44:57.871Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "0987beab4dd43470c726fea741d91bedb04c53d0",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "fix"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "0d8eb92b-24fa-4a68-a22d-b202df3b9221",
-      "errors": [
-        {
-          "type": "config",
-          "message": "ERROR IN CONFIG FILE:"
-        },
-        {
-          "type": "config",
-          "message": "[#/jobs/build_img] 0 subschemas matched instead of one"
-        },
-        {
-          "type": "config",
-          "message": "1. [#/jobs/build_img] only 1 subschema matches out of 2"
-        },
-        {
-          "type": "config",
-          "message": "|   1. [#/jobs/build_img] extraneous key [deploy_img] is not permitted"
-        },
-        {
-          "type": "config",
-          "message": "|   |   Permitted keys:"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - description"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - parallelism"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - macos"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - resource_class"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - docker"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - steps"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - working_directory"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - circleci_ip_ranges"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - machine"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - environment"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - executor"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - shell"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - parameters"
-        },
-        {
-          "type": "config",
-          "message": "|   |   Passed keys:"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - docker"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - environment"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - steps"
-        },
-        {
-          "type": "config",
-          "message": "|   |     - deploy_img"
-        },
-        {
-          "type": "config",
-          "message": "2. [#/jobs/build_img] expected type: String, found: Mapping"
-        },
-        {
-          "type": "config",
-          "message": "|   Job may be a string reference to another job"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T11:44:21.698Z",
-      "number": 24,
-      "state": "errored",
-      "created_at": "2023-07-02T11:44:21.698Z",
-      "trigger": {
-        "received_at": "2023-07-02T11:44:21.297Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "35ef92e02f1b44ec3a4b6ff8b19a90fd7fd7b418",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "new stuff in"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "af560abc-0cc9-43f4-8549-33b0854559b8",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T10:07:37.427Z",
-      "number": 23,
-      "state": "created",
-      "created_at": "2023-07-02T10:07:37.427Z",
-      "trigger": {
-        "received_at": "2023-07-02T10:07:37.167Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "3c5b20d6d9ac3566e7f55c9474abd20571288411",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "scripts"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "280fc67f-b381-45d2-8d38-2d54633562cb",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T10:00:55.344Z",
-      "number": 22,
-      "state": "created",
-      "created_at": "2023-07-02T10:00:55.344Z",
-      "trigger": {
-        "received_at": "2023-07-02T10:00:55.059Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "bcd851a49a91354205712ff34fc13d8308bd36b1",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "+ script"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "95c7a94c-08d6-4a1a-bbd2-fd22015ba4ad",
-      "errors": [],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T09:46:24.609Z",
-      "number": 21,
-      "state": "created",
-      "created_at": "2023-07-02T09:46:24.609Z",
-      "trigger": {
-        "received_at": "2023-07-02T09:46:24.323Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "08eaaeada98e97379bc87d6c516a0f2a535fb908",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "attempt"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "f61af1ed-0df6-4c52-86a9-ca5e1868cb5a",
-      "errors": [
-        {
-          "type": "config",
-          "message": "Error calling workflow: 'img_docker'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling job: 'build'"
-        },
-        {
-          "type": "config",
-          "message": "Cannot find a definition for command named environment"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T09:43:05.578Z",
-      "number": 20,
-      "state": "errored",
-      "created_at": "2023-07-02T09:43:05.578Z",
-      "trigger": {
-        "received_at": "2023-07-02T09:43:05.261Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "70785e4b65b9efbc5d7368eb4fdc9f7d1da1e1a1",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "ds"
-        },
-        "branch": "master"
-      }
-    },
-    {
-      "id": "22d554b1-4d9d-4896-b60d-9a5b210998c8",
-      "errors": [
-        {
-          "type": "config",
-          "message": "Error calling workflow: 'img_docker'"
-        },
-        {
-          "type": "config",
-          "message": "Error calling job: 'build'"
-        },
-        {
-          "type": "config",
-          "message": "Cannot find a definition for command named environment"
-        }
-      ],
-      "project_slug": "gh/amavrogiannis/circleci_poc",
-      "updated_at": "2023-07-02T09:40:36.073Z",
-      "number": 19,
-      "state": "errored",
-      "created_at": "2023-07-02T09:40:36.073Z",
-      "trigger": {
-        "received_at": "2023-07-02T09:40:35.784Z",
-        "type": "webhook",
-        "actor": {
-          "login": "amavrogiannis",
-          "avatar_url": "https://avatars.githubusercontent.com/u/62666298?v=4"
-        }
-      },
-      "vcs": {
-        "origin_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "target_repository_url": "https://github.com/amavrogiannis/circleci_poc",
-        "revision": "dd86b37f343dfc8e04befb487c4311dfc25445a5",
-        "provider_name": "GitHub",
-        "commit": {
-          "body": "",
-          "subject": "dataset"
         },
         "branch": "master"
       }
