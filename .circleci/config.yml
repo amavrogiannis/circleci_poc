@@ -2,18 +2,7 @@ version: 2.1
 
 jobs:
 
-  # setup: 
-  #   docker: 
-  #     - image: cimg/base:2023.06
-  #   resource_class: medium
-  #   steps:
-  #     - setup_remote_docker:
-  #         docker_layer_caching: true
-  #         version: 20.10.14
-  #   environment:
-  #     CONTAINER_NAME: sample-app
-
-  build:
+  setup: 
     docker: 
       - image: cimg/base:2023.06
     resource_class: medium
@@ -21,11 +10,20 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
           version: 20.10.14
+    environment:
+      CONTAINER_NAME: registry.gitlab.com/and-amavrogiannis/lab-project/sample-app
+      TAG: $(echo $CIRCLE_SHA1 | cut -d ':' -f 2)
+
+  build:
+    docker: 
+      - image: cimg/base:2023.06
+    resource_class: medium
+    steps:
       - checkout
       - run:
           name: Docker build
           command: |  
-            docker build . -t $CONTAINER_NAME$CIRCLE_SHA1
+            docker build . -t $CONTAINER_NAME:$TAG
   
   deploy:
     docker: 
@@ -35,15 +33,16 @@ jobs:
           name: Docker push
           command: |
             docker login --username $GL_USER --password $REG_TOKEN registry.gitlab.com
+            docker push $CONTAINER_NAME:$TAG
 
 workflows:
 
   docker_image:
     jobs:
-      # - setup
-      - build 
-          # requires:
-            # - setup
+      - setup
+      - build:
+          requires:
+            - setup
       - deploy: 
           requires:
             - build 
