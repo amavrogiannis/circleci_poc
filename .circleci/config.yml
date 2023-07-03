@@ -21,6 +21,15 @@ jobs:
       - run:
           name: Docker build
           command: docker build -t "${IMAGE_NAME}:${CIRCLE_SHA1}" .
+      - run: 
+          name: Save image
+          command: |
+            mkdir /image_artifact
+            docker image save -o "${IMAGE_NAME}_${CIRCLE_SHA1}" "${IMAGE_NAME}:${CIRCLE_SHA1}"
+      - persist_to_workspace:
+          root: .
+          paths:
+            - image_artifact
   
   deploy:
     executor: 
@@ -29,6 +38,12 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
           version: 20.10.14
+      - attach_workspace:
+          at: .
+      - run: 
+          name: Load Image
+          command: |
+            docker image load < "${IMAGE_NAME}_${CIRCLE_SHA1}"
       - run: 
           name: Docker push
           command: |
