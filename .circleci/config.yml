@@ -24,8 +24,8 @@ jobs:
       - run: 
           name: Save image
           command: |
-            mkdir /image_artifact
-            docker image save -o "${IMAGE_NAME}_${CIRCLE_SHA1}" "${IMAGE_NAME}:${CIRCLE_SHA1}"
+            mkdir -p image_artifact
+            docker image save -o "image_artifact/ZIP_${CIRCLE_SHA1}" "${IMAGE_NAME}:${CIRCLE_SHA1}"
       - persist_to_workspace:
           root: .
           paths:
@@ -43,7 +43,7 @@ jobs:
       - run: 
           name: Load Image
           command: |
-            docker image load < "${IMAGE_NAME}_${CIRCLE_SHA1}"
+            docker image load < "image_artifact/ZIP_${CIRCLE_SHA1}"
       - run: 
           name: Docker push
           command: |
