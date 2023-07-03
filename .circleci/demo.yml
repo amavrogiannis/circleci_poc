@@ -1,0 +1,44 @@
+version: 2.1
+
+# Setting up the Orbs in the CircleCI configuration. 
+orbs:
+  buildevents: honeycombio/buildevents@0.9.0
+
+jobs: 
+
+# This is a setup step, that will allow you to include 
+# part of the next step and trace the entire configuration.
+  setup: 
+    docker: 
+    - image: cimg/base:2023.06
+    resource_class: medium
+    steps:
+    - buildevents/start_trace
+    - setup_remote_docker:
+        version: 20.10.14
+        docker_layer_caching: true
+    environment:
+      BUILDEVENT_DATASET: alex-demo
+
+# The build is a simple example, which creates an image. 
+  build: 
+    docker:
+      - image: cimg/base:2023.06
+    steps:
+      - buildevents/with_job_span:
+          steps:
+            - checkout
+            - run: 
+                name: build_img
+                command: |
+                  docker build . -t $CONTAINER_NAME:$CIRCLE_SHA1
+                environment:
+                  CONTAINER_NAME: lab-project/sample-app
+
+workflows:
+  img_docker:
+    jobs:
+      - setup
+      - build:
+          requires:
+            - setup
