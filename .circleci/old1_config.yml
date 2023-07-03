@@ -1,0 +1,79 @@
+version: 2.1
+
+orbs:
+  buildevents: honeycombio/buildevents@0.9.0
+
+jobs: 
+
+  # login: 
+  #   docker: 
+  #   - image: cimg/base:2023.06
+  #   steps:
+  #   - name: login to docker
+  #   - command: |
+  #       docker login --username $GL_USER --password $REG_TOKEN registry.gitlab.com
+
+  setup: 
+    docker: 
+    - image: cimg/base:2023.06
+    resource_class: medium
+    steps:
+    - buildevents/start_trace
+    - setup_remote_docker:
+        version: 20.10.14
+        docker_layer_caching: true
+    environment:
+      BUILDEVENT_DATASET: alex-demo
+
+  # watch:
+  #   docker: 
+  #   - image: cimg/base:2023.06
+  #   steps:
+  #   - buildevents/finish
+
+  build: 
+    docker:
+      - image: cimg/base:2023.06
+    steps:
+      - buildevents/with_job_span:
+          steps:
+            - checkout
+            - run: 
+                name: build_img
+                command: |
+                  docker build . -t $CONTAINER_NAME:$CIRCLE_SHA1
+                environment:
+                  CONTAINER_NAME: lab-project/sample-app
+      - buildevents/add_context:
+          field_name: demo_data
+          field_value: $CONTAINER_NAME:$CIRCLE_SHA1
+          verbose: true
+  # deploy:
+  #   docker: 
+  #     - image: cimg/base:2023.06
+  #   steps:
+  #     - name: deploying to GitLab Reg
+  #     - run: 
+  #         command: |
+  #           docker push $CONTAINER_NAME:$CIRCLE_SHA1
+  #         environment:
+  #           CONTAINER_NAME: lab-project/sample-app
+
+
+workflows:
+  img_docker:
+    jobs:
+      - setup
+      - build:
+          requires:
+            - setup
+      # - login:
+      #     requires:
+      #       - setup
+      # - deploy:
+      #     requires:
+      #       - login
+      #       - build
+      # - watch:
+      #     requires:
+      #       - setup
