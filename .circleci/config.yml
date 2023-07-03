@@ -5,10 +5,6 @@ executors:
     docker:
       - image: cimg/base:2023.06
     resource_class: medium
-    steps:
-      - setup_remote_docker:
-          docker_layer_caching: true
-          version: 20.10.14
     environment:
           IMAGE_NAME: registry.gitlab.com/and-amavrogiannis/lab-project/sample-app
 
@@ -18,6 +14,9 @@ jobs:
     executor: 
       name: docker
     steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
+          version: 20.10.14
       - checkout
       - run:
           name: Docker build
@@ -27,6 +26,9 @@ jobs:
     executor: 
       name: docker
     steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
+          version: 20.10.14
       - run: 
           name: Docker push
           command: |
