@@ -18,8 +18,9 @@ jobs:
       - image: cimg/base:2023.06
     steps:
       - run:
+          name: Docker build
           command: |  
-            docker build . -t $CONTAINER_NAME:$CIRCLE_SHA1
+            docker build . -t "${CONTAINER_NAME}":"${CIRCLE_SHA1}"
   
   deploy:
     docker: 
