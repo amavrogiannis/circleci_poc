@@ -1,0 +1,1 @@
+{"pipeline_id": "9edeaf0a-bd01-43f5-b455-95558848664b", "id": "3a2a9b57-e53f-4e17-8208-5ea054278137", "name": "docker_image", "project_slug": "gh/amavrogiannis/circleci_poc", "status": "success", "started_by": "0e185306-39b8-403f-895f-1d211f0a07fa", "pipeline_number": 57, "created_at": "2023-07-03T14:37:48Z", "stopped_at": "2023-07-03T14:39:16Z"}
