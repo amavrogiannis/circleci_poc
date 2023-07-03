@@ -2,7 +2,18 @@ version: 2.1
 
 jobs:
 
-  setup: 
+  # setup: 
+  #   docker: 
+  #     - image: cimg/base:2023.06
+  #   resource_class: medium
+  #   steps:
+  #     - setup_remote_docker:
+  #         docker_layer_caching: true
+  #         version: 20.10.14
+  #   environment:
+  #     CONTAINER_NAME: sample-app
+
+  build:
     docker: 
       - image: cimg/base:2023.06
     resource_class: medium
@@ -10,18 +21,11 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
           version: 20.10.14
-    environment:
-      CONTAINER_NAME: sample-app
-
-  build:
-    docker: 
-      - image: cimg/base:2023.06
-    steps:
       - checkout
       - run:
           name: Docker build
           command: |  
-            docker build Dockerfile -t $CONTAINER_NAME$CIRCLE_SHA1
+            docker build . -t $CONTAINER_NAME$CIRCLE_SHA1
   
   deploy:
     docker: 
@@ -36,10 +40,10 @@ workflows:
 
   docker_image:
     jobs:
-      - setup
-      - build: 
-          requires:
-            - setup
+      # - setup
+      - build 
+          # requires:
+            # - setup
       - deploy: 
           requires:
             - build 
